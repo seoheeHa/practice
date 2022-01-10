@@ -1,0 +1,41 @@
+create table emp_tbl_01(
+empno number(6) not null,
+empname varchar2(20),
+phone varchar2(13),
+address varchar2(60),
+startdate date,
+grade char(1),
+city char(2),
+PRIMARY KEY(empno)
+);
+
+create table sales_tbl_01(
+empno number(6) not null,
+saleno number(8) not null,
+pcost number(8),
+amount number(4),
+price number(8),
+pcode varchar2(4),
+sdate date,
+PRIMARY KEY(empno, saleno)
+);
+
+insert into emp_tbl_01 values(100001, '김철수', '010-1111-1111', '서울 영등포', '20151203', 'A', '01');
+insert into emp_tbl_01 values(100002, '이빛나', '010-2222-2222', '서울 금천', '20180822', 'B', '01');
+insert into emp_tbl_01 values(100003, '최고니', '010-3333-3333', '수원 팔달', '20200208', 'C', '02');
+insert into emp_tbl_01 values(100004, '홍수원', '010-4444-4444', '부산 사상', '20110911', 'A', '03');
+insert into emp_tbl_01 values(100005, '마동수', '010-5555-5555', '부산 동래', '20210129', 'C', '03');
+insert into emp_tbl_01 values(100006, '천해명', '010-6666-6666', '창원 진해', '20191221', 'B', '04');
+
+
+
+insert into sales_tbl_01 values(100001, 20210001, 500, 5, 2500, 'A001', '20210101');
+insert into sales_tbl_01 values(100001, 20210002, 1000, 4, 4000, 'A002', '20210101');
+insert into sales_tbl_01 values(100001, 20210003, 500, 3, 1500, 'A008', '20210101');
+insert into sales_tbl_01 values(100002, 20210004, 2000, 1, 2000, 'A004', '20210104');
+insert into sales_tbl_01 values(100002, 20210005, 500, 1, 500, 'A001', '20210104');
+insert into sales_tbl_01 values(100003, 20210006, 1500, 2, 3000, 'A003', '20210104');
+insert into sales_tbl_01 values(100004, 20210007, 500, 2, 1000, 'A001', '20210423');
+insert into sales_tbl_01 values(100004, 20210008, 300, 1, 300, 'A005', '20210423');
+insert into sales_tbl_01 values(100004, 20210009, 600, 1, 600, 'A006', '20210423');
+insert into sales_tbl_01 values(100004, 20210010, 3000, 1, 3000, 'A007', '20210423');
